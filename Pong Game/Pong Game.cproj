@@ -1,0 +1,429 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectVersion>6.2</ProjectVersion>
+    <ToolchainName>com.Atmel.AVRGCC8.C</ToolchainName>
+    <ProjectGuid>{54f8c0c2-16ff-4e31-8fa4-bfd556bc1953}</ProjectGuid>
+    <avrdevice>ATmega32U2</avrdevice>
+    <avrdeviceseries>none</avrdeviceseries>
+    <OutputType>Executable</OutputType>
+    <Language>C</Language>
+    <OutputFileName>$(MSBuildProjectName)</OutputFileName>
+    <OutputFileExtension>.elf</OutputFileExtension>
+    <OutputDirectory>$(MSBuildProjectDirectory)\$(Configuration)</OutputDirectory>
+    <AssemblyName>Pong Game</AssemblyName>
+    <Name>Pong Game</Name>
+    <RootNamespace>Pong Game</RootNamespace>
+    <ToolchainFlavour>Native</ToolchainFlavour>
+    <KeepTimersRunning>true</KeepTimersRunning>
+    <OverrideVtor>false</OverrideVtor>
+    <CacheFlash>true</CacheFlash>
+    <ProgFlashFromRam>true</ProgFlashFromRam>
+    <RamSnippetAddress>0x20000000</RamSnippetAddress>
+    <UncachedRange />
+    <preserveEEPROM>true</preserveEEPROM>
+    <OverrideVtorValue>exception_table</OverrideVtorValue>
+    <BootSegment>2</BootSegment>
+    <eraseonlaunchrule>0</eraseonlaunchrule>
+    <AsfFrameworkConfig>
+      <framework-data xmlns="">
+  <options />
+  <configurations />
+  <files />
+  <documentation help="" />
+  <offline-documentation help="" />
+  <dependencies>
+    <content-extension eid="atmel.asf" uuidref="Atmel.ASF" version="3.26.0" />
+  </dependencies>
+</framework-data>
+    </AsfFrameworkConfig>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <ToolchainSettings>
+      <AvrGcc>
+  <avrgcc.common.outputfiles.hex>True</avrgcc.common.outputfiles.hex>
+  <avrgcc.common.outputfiles.lss>True</avrgcc.common.outputfiles.lss>
+  <avrgcc.common.outputfiles.eep>True</avrgcc.common.outputfiles.eep>
+  <avrgcc.common.outputfiles.srec>True</avrgcc.common.outputfiles.srec>
+  <avrgcc.common.outputfiles.usersignatures>False</avrgcc.common.outputfiles.usersignatures>
+  <avrgcc.compiler.general.ChangeDefaultCharTypeUnsigned>True</avrgcc.compiler.general.ChangeDefaultCharTypeUnsigned>
+  <avrgcc.compiler.general.ChangeDefaultBitFieldUnsigned>True</avrgcc.compiler.general.ChangeDefaultBitFieldUnsigned>
+  <avrgcc.compiler.symbols.DefSymbols>
+    <ListValues>
+      <Value>NDEBUG</Value>
+    </ListValues>
+  </avrgcc.compiler.symbols.DefSymbols>
+  <avrgcc.compiler.optimization.level>Optimize for size (-Os)</avrgcc.compiler.optimization.level>
+  <avrgcc.compiler.optimization.PackStructureMembers>True</avrgcc.compiler.optimization.PackStructureMembers>
+  <avrgcc.compiler.optimization.AllocateBytesNeededForEnum>True</avrgcc.compiler.optimization.AllocateBytesNeededForEnum>
+  <avrgcc.compiler.warnings.AllWarnings>True</avrgcc.compiler.warnings.AllWarnings>
+  <avrgcc.linker.libraries.Libraries>
+    <ListValues>
+      <Value>libm</Value>
+    </ListValues>
+  </avrgcc.linker.libraries.Libraries>
+</AvrGcc>
+    </ToolchainSettings>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <ToolchainSettings>
+      <AvrGcc>
+  <avrgcc.common.outputfiles.hex>True</avrgcc.common.outputfiles.hex>
+  <avrgcc.common.outputfiles.lss>True</avrgcc.common.outputfiles.lss>
+  <avrgcc.common.outputfiles.eep>True</avrgcc.common.outputfiles.eep>
+  <avrgcc.common.outputfiles.srec>True</avrgcc.common.outputfiles.srec>
+  <avrgcc.common.outputfiles.usersignatures>False</avrgcc.common.outputfiles.usersignatures>
+  <avrgcc.compiler.general.ChangeDefaultCharTypeUnsigned>True</avrgcc.compiler.general.ChangeDefaultCharTypeUnsigned>
+  <avrgcc.compiler.general.ChangeDefaultBitFieldUnsigned>True</avrgcc.compiler.general.ChangeDefaultBitFieldUnsigned>
+  <avrgcc.compiler.symbols.DefSymbols>
+    <ListValues>
+      <Value>DEBUG</Value>
+    </ListValues>
+  </avrgcc.compiler.symbols.DefSymbols>
+  <avrgcc.compiler.optimization.level>Optimize (-O1)</avrgcc.compiler.optimization.level>
+  <avrgcc.compiler.optimization.PackStructureMembers>True</avrgcc.compiler.optimization.PackStructureMembers>
+  <avrgcc.compiler.optimization.AllocateBytesNeededForEnum>True</avrgcc.compiler.optimization.AllocateBytesNeededForEnum>
+  <avrgcc.compiler.optimization.DebugLevel>Default (-g2)</avrgcc.compiler.optimization.DebugLevel>
+  <avrgcc.compiler.warnings.AllWarnings>True</avrgcc.compiler.warnings.AllWarnings>
+  <avrgcc.linker.libraries.Libraries>
+    <ListValues>
+      <Value>libm</Value>
+    </ListValues>
+  </avrgcc.linker.libraries.Libraries>
+  <avrgcc.assembler.debugging.DebugLevel>Default (-Wa,-g)</avrgcc.assembler.debugging.DebugLevel>
+</AvrGcc>
+    </ToolchainSettings>
+    <UsesExternalMakeFile>True</UsesExternalMakeFile>
+    <OutputDirectory>H:\My Documents\Atmel Studio\6.2\Pong Game\Pong Game\src\app</OutputDirectory>
+    <BuildTarget>all</BuildTarget>
+    <CleanTarget>clean</CleanTarget>
+    <ExternalMakeFilePath>H:\My Documents\Atmel Studio\6.2\Pong Game\Pong Game\src\app\Makefile</ExternalMakeFilePath>
+  </PropertyGroup>
+  <ItemGroup>
+    <Folder Include="src" />
+    <Folder Include="src\drivers" />
+    <Folder Include="src\drivers\avr" />
+    <Folder Include="src\drivers\test" />
+    <Folder Include="src\fonts" />
+    <Folder Include="src\app" />
+    <Folder Include="src\utils" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="src\app\bool.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\app\comm.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\app\comm.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\app\debug.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\app\debug.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\app\draw.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\app\draw.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\app\game.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\app\game_state.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\app\game_state.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\app\input.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\app\input.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\app\main_loops.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\app\main_loops.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\app\main_loop_utils.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\app\main_loop_utils.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\app\my_pacer.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\app\my_pacer.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\app\my_task.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\app\my_task.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\app\vector.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\app\vector.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\drivers\avr\adc.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\drivers\avr\adc.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\drivers\avr\bits.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\drivers\avr\delay.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\drivers\avr\eeprom.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\drivers\avr\eeprom.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\drivers\avr\ir_uart.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\drivers\avr\ir_uart.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\drivers\avr\pio.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\drivers\avr\pio.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\drivers\avr\prescale.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\drivers\avr\prescale.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\drivers\avr\system.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\drivers\avr\system.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\drivers\avr\target.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\drivers\avr\timer.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\drivers\avr\timer.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\drivers\avr\timer0.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\drivers\avr\timer0.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\drivers\avr\usart1.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\drivers\avr\usart1.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\drivers\button.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\drivers\button.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\drivers\display.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\drivers\display.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\drivers\ir.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\drivers\ir.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\drivers\ir_rx5_rx.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\drivers\ir_rx5_rx.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\drivers\ir_serial.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\drivers\ir_serial.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\drivers\led.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\drivers\led.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\drivers\ledmat.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\drivers\ledmat.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\drivers\navswitch.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\drivers\navswitch.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\drivers\test\avrtest.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\drivers\test\delay.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\drivers\test\eeprom.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\drivers\test\eeprom.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\drivers\test\ir_uart.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\drivers\test\ir_uart.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\drivers\test\mgetkey.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\drivers\test\mgetkey.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\drivers\test\pio.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\drivers\test\pio.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\drivers\test\system.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\drivers\test\system.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\drivers\test\target.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\drivers\test\timer.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\drivers\test\timer.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\fonts\font3x5_1.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\fonts\font3x5_1_r.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\fonts\font5x7_1.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\fonts\font5x7_1_r.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\fonts\font5x7_2.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\fonts\font5x7_2_r.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\fonts\fontgen.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\utils\boing.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\utils\boing.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\utils\font.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\utils\font.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\utils\pacer.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\utils\pacer.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\utils\spwm.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\utils\spwm.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\utils\task.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\utils\task.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\utils\tinygl.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\utils\tinygl.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\utils\uint8toa.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\utils\uint8toa.h">
+      <SubType>compile</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="src\app\Makefile">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="src\app\README.txt">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="src\drivers\avr\README">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="src\fonts\font3x5_1.txt">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="src\fonts\font5x7_1.txt">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="src\fonts\font5x7_2.txt">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="src\fonts\Makefile">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="src\fonts\README">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="src\utils\README">
+      <SubType>compile</SubType>
+    </None>
+  </ItemGroup>
+  <Import Project="$(AVRSTUDIO_EXE_PATH)\\Vs\\Compiler.targets" />
+</Project>
