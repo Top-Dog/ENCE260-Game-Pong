@@ -32,21 +32,8 @@
 #include "main_loops.h"
 #include "main_loop_utils.h"
 
-#include "pio.h"
-#include "system.h"
-#define ENABLE_ASSERT
-#define DEBUG
-#include "debug.h"
 
-
-int main(void) {
-	system_init();
-	debug_init();
-	while (1) {
-	//ASSERT(0);
-	TRACE("\nIn searching main loop.\n");
-	}
-	
+int main(void) {	
     GameState state = 
     {
         .mode = TITLE,

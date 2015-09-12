@@ -91,15 +91,15 @@ game.out: game.o main_loops.o game_state.o vector.o debug.o main_loop_utils.o co
 # Target: clean project.
 .PHONY: clean
 clean: 
-	-$(DEL) *.o *.out *.hex
+	-$(DEL) *.o *.out *.hex ../../*.hex
 
 
 # Target: program project.
 .PHONY: program
 program: game.out
-	$(OBJCOPY) -O ihex game.out game.hex
+	$(OBJCOPY) -O ihex game.out ../../game.hex
 	dfu-programmer atmega32u2 erase
-	dfu-programmer atmega32u2 flash game.hex
+	dfu-programmer atmega32u2 flash ../../game.hex
 	dfu-programmer atmega32u2 start
 
 
