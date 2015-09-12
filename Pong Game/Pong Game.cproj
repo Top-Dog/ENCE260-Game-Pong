@@ -101,6 +101,9 @@
     <ExternalMakeFilePath>src\app\Makefile</ExternalMakeFilePath>
   </PropertyGroup>
   <ItemGroup>
+    <Folder Include="build\" />
+    <Folder Include="doc\" />
+    <Folder Include="programmer\" />
     <Folder Include="src" />
     <Folder Include="src\drivers" />
     <Folder Include="src\drivers\avr" />
@@ -397,6 +400,12 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <None Include="build\game.hex">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="programmer\upload.bat">
+      <SubType>compile</SubType>
+    </None>
     <None Include="src\app\Makefile">
       <SubType>compile</SubType>
     </None>
